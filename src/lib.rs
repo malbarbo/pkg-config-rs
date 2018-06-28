@@ -571,7 +571,7 @@ fn is_static_available(name: &str, dirs: &[PathBuf]) -> bool {
     };
 
     dirs.iter().any(|dir| {
-        !system_roots.iter().any(|sys| dir.starts_with(sys)) &&
+        // !system_roots.iter().any(|sys| dir.starts_with(sys)) &&
         dir.join(&libname).exists()
     })
 }
